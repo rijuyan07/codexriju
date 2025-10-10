@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riju | Full-Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Riju<span>..D..</span></a>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>RIJUYANUR</h1>
+                <h2>Full-Stack Developer & Designer</h2>
+                <p>I create modern, responsive websites and applications with cutting-edge technologies. Passionate about clean code, intuitive design, and seamless user experiences.</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+            <div class="profile-container">
+                <div class="profile-bg"></div>
+                <img src="profile.jpg" alt="Riju" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about">
+                <h2>About Me</h2>
+                <p>Hello! I'm Riju, a passionate full-stack web developer and designer with a strong interest in emerging technologies, especially AI. I specialize in creating modern, responsive websites that provide exceptional user experiences.</p>
+                <p>With expertise in both front-end and back-end development, I bring ideas to life through clean code and intuitive design. My approach combines technical skill with creative problem-solving to deliver solutions that exceed expectations.</p>
+                <p>When I'm not coding, you can find me exploring new tech trends, contributing to open-source projects, or experimenting with AI applications. I'm always eager to take on new challenges and expand my skill set.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom website development using modern frameworks and technologies. From simple landing pages to complex web applications.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p>User-centered design that balances aesthetics with functionality. Creating visually appealing and intuitive interfaces.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Ensuring your website looks and works perfectly on all devices, from desktops to smartphones.</p>
+                </div>
+            </div>
+
+            <div class="skills">
+                <h3>Technologies I Work With</h3>
+                <div class="skills-list">
+                    <div class="skill-item" data-language="html5">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item" data-language="css3">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item" data-language="javascript">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item" data-language="react">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item" data-language="nodejs">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item" data-language="mongodb">
+                        <i class="fas fa-database"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="skill-item" data-language="python">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item" data-language="git">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">My Work</h2>
+            <div class="slider-container">
+                <div class="slider" id="slider">
+                    <div class="slide">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                </div>
+                <button class="slider-btn prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="slider-nav" id="sliderNav">
+                <!-- Dots will be added by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact">
+                <h2>Get In Touch</h2>
+                <p>Have a project in mind or want to discuss potential collaboration? Feel free to reach out through any of the platforms below.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1BMLvuRzpF/" class="social-link facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/i_am_riju.x07?igsh=MWtiZXF1eWJuZGExOQ==" class="social-link instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:srijuyanur@gmail.com" class="social-link email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Riju. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Language Detail Modal -->
+    <div id="languageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i id="modalIcon" class="fab fa-html5"></i>
+                <h2 id="modalTitle">HTML5</h2>
+            </div>
+            <div class="modal-body">
+                <div class="language-image">
+                    <img id="modalImage" src="" alt="Language Image">
+                </div>
+                <div class="language-details">
+                    <h3>About <span id="languageName">HTML5</span></h3>
+                    <p id="modalDescription">Description will be loaded here.</p>
+                    <div class="language-features">
+                        <h4>Key Features:</h4>
+                        <ul id="featuresList">
+                            <!-- Features will be added by JavaScript -->
+                        </ul>
+                    </div>
+                    <div class="language-projects">
+                        <h4>Projects Using <span id="projectsLanguage">HTML5</span>:</h4>
+                        <div class="projects-grid" id="projectsGrid">
+                            <!-- Projects will be added by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
