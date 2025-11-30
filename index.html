@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code X Riju</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body class="font-rajdhani selection:bg-brand selection:text-black">
+
+    <div class="noise-overlay"></div>
+
+    <div id="loader-container">
+        <div class="loader-content font-orbitron text-2xl md:text-4xl tracking-widest text-brand">
+            <span class="animate-pulse">LOADING...</span>
+            <div class="mt-4 text-white text-sm tracking-normal opacity-70">INITIALIZING SYSTEM</div>
+            <div class="w-48 h-1 bg-gray-800 mt-4 mx-auto rounded overflow-hidden">
+                <div id="progress-bar" class="h-full bg-brand w-0 transition-all duration-[1000ms] ease-out"></div>
+            </div>
+        </div>
+        <div class="door-panel door-left"></div>
+        <div class="door-panel door-right"></div>
+    </div>
+
+    <div id="tech-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm p-4">
+        <div id="modal-content" class="relative bg-secondary w-full max-w-4xl max-h-[80vh] rounded-2xl border border-brand/30 shadow-[0_0_50px_rgba(0,255,157,0.15)] flex flex-col overflow-hidden transform scale-95 transition-transform duration-300">
+            <div class="p-6 border-b border-white/10 flex justify-between items-center bg-black/50 backdrop-blur-md sticky top-0 z-10">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center border border-brand/20">
+                        <i id="modal-icon" class="text-2xl text-brand"></i>
+                    </div>
+                    <h2 id="modal-title" class="text-3xl font-orbitron font-bold text-white tracking-wide"></h2>
+                </div>
+                <button onclick="closeModal()" class="w-10 h-10 rounded-full bg-white/5 hover:bg-red-500/20 hover:text-red-500 transition flex items-center justify-center text-xl text-gray-400">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="modal-body" class="p-8 overflow-y-auto custom-scrollbar bg-[#0f0f0f]"></div>
+            <div class="p-4 border-t border-white/10 bg-black/50 backdrop-blur-md text-right">
+                <button onclick="closeModal()" class="px-6 py-2 border border-brand/30 text-brand hover:bg-brand hover:text-black transition uppercase font-bold text-sm tracking-widest rounded">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main class="relative z-10 opacity-0 transition-opacity duration-1000">
+
+        <nav class="fixed top-0 w-full z-40 bg-black/80 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+                <h1 class="text-2xl font-orbitron font-bold text-white tracking-wider">CODE X <span class="text-brand">RIJU</span></h1>
+                <ul class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+                    <li><a href="#home" class="hover:text-brand transition">Home</a></li>
+                    <li><a href="#services" class="hover:text-brand transition">Services</a></li>
+                    <li><a href="#stack" class="hover:text-brand transition">Stack</a></li>
+                    <li><a href="#ai-hub" class="hover:text-ai transition text-ai drop-shadow-[0_0_5px_rgba(139,92,246,0.5)]">AI Hub</a></li>
+                    <li><a href="#contact" class="hover:text-brand transition">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="home" class="min-h-screen flex flex-col items-center justify-center pt-20 px-6 gap-8 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat bg-blend-overlay bg-black/90 text-center">
+            
+            <div class="relative z-10">
+                <div class="profile-wrapper w-56 h-56 md:w-72 md:h-72 rounded-full flex items-center justify-center p-2 mx-auto">
+                    <img src="profile.jpg" 
+                            alt="Riju Profile" 
+                            class="w-full h-full object-cover rounded-full border-4 border-gray-900 grayscale hover:grayscale-0 transition duration-500">
+                </div>
+            </div>
+
+            <div class="z-20 max-w-3xl">
+                <h3 class="text-brand tracking-[0.3em] mb-4 font-bold text-sm md:text-base uppercase">Building The Digital Future</h3>
+                
+                <h1 class="text-5xl md:text-8xl font-orbitron font-black mb-2 text-white glitch-text" data-text="CODE X RIJU">
+                    CODE X RIJU
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-400 font-rajdhani tracking-[0.2em] mb-10 font-medium">
+                    FULL STACK DEVELOPER | AI ENTHUSIAST
+                </p>
+
+                <div class="flex flex-col md:flex-row gap-6 justify-center">
+                    <a href="#services" class="px-10 py-4 bg-brand text-black font-bold hover:bg-white transition-all duration-300 uppercase tracking-widest clip-path-polygon shadow-[0_0_20px_rgba(0,255,157,0.3)] hover:shadow-[0_0_30px_rgba(0,255,157,0.6)]">
+                        My Services
+                    </a>
+                    <a href="#contact" class="px-10 py-4 bg-transparent border border-brand text-brand hover:bg-brand/10 transition-all duration-300 font-bold uppercase tracking-widest clip-path-polygon hover:shadow-[0_0_15px_rgba(0,255,157,0.2)]">
+                        Collab Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 bg-dark relative">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-12 text-center text-white">WHAT I <span class="text-brand">OFFER</span></h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-surface p-8 rounded-xl border border-white/5 hover:border-brand/50 transition duration-300 group text-center">
+                        <div class="w-16 h-16 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-6 text-brand text-2xl group-hover:scale-110 transition">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Building blazing fast, responsive, and SEO-friendly websites using React, Next.js, and Tailwind CSS.</p>
+                    </div>
+
+                    <div class="bg-surface p-8 rounded-xl border border-white/5 hover:border-brand/50 transition duration-300 group text-center">
+                        <div class="w-16 h-16 bg-ai/10 rounded-full flex items-center justify-center mx-auto mb-6 text-ai text-2xl group-hover:scale-110 transition">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">AI Integration</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Integrating LLMs (ChatGPT, Gemini) and automation scripts into web apps to make them smarter.</p>
+                    </div>
+
+                    <div class="bg-surface p-8 rounded-xl border border-white/5 hover:border-brand/50 transition duration-300 group text-center">
+                        <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 text-accent text-2xl group-hover:scale-110 transition">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Backend Systems</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Robust server-side logic, API development, and database management with Node.js and MongoDB.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stack" class="py-20 bg-black relative">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-4 text-center">MY <span class="text-brand">ARSENAL</span></h2>
+                <p class="text-center text-gray-400 mb-12">Click cards for details</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div onclick="openModal('html')" class="bg-surface p-6 rounded-xl border border-white/5 hover:border-brand/50 transition duration-300 group hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition text-brand"><i class="fas fa-expand-alt"></i></div>
+                        <div class="flex gap-4 mb-4 text-4xl text-gray-500">
+                            <i class="fab fa-html5 group-hover:text-orange-500 transition"></i>
+                            <i class="fab fa-css3-alt group-hover:text-blue-500 transition"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">HTML & CSS</h3>
+                        <p class="text-xs text-gray-400">Semantic markup</p>
+                    </div>
+
+                    <div onclick="openModal('js')" class="bg-surface p-6 rounded-xl border border-white/5 hover:border-brand/50 transition duration-300 group hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition text-brand"><i class="fas fa-expand-alt"></i></div>
+                        <i class="fab fa-js text-4xl text-gray-500 group-hover:text-yellow-400 mb-4 transition"></i>
+                        <h3 class="text-xl font-bold mb-2">JavaScript</h3>
+                        <p class="text-xs text-gray-400">ES6+, Async/Await</p>
+                    </div>
+
+                    <div onclick="openModal('react')" class="bg-surface p-6 rounded-xl border border-white/5 hover:border-brand/50 transition duration-300 group hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition text-brand"><i class="fas fa-expand-alt"></i></div>
+                        <i class="fab fa-react text-4xl text-gray-500 group-hover:text-blue-400 mb-4 transition"></i>
+                        <h3 class="text-xl font-bold mb-2">React.js</h3>
+                        <p class="text-xs text-gray-400">Scalable UI</p>
+                    </div>
+
+                    <div onclick="openModal('node')" class="bg-surface p-6 rounded-xl border border-white/5 hover:border-brand/50 transition duration-300 group hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition text-brand"><i class="fas fa-expand-alt"></i></div>
+                        <i class="fab fa-node text-4xl text-gray-500 group-hover:text-green-500 mb-4 transition"></i>
+                        <h3 class="text-xl font-bold mb-2">Node.js</h3>
+                        <p class="text-xs text-gray-400">Backend Logic</p>
+                    </div>
+
+                    <div onclick="openModal('python')" class="bg-surface p-6 rounded-xl border border-white/5 hover:border-brand/50 transition duration-300 group hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition text-brand"><i class="fas fa-expand-alt"></i></div>
+                        <i class="fab fa-python text-4xl text-gray-500 group-hover:text-blue-300 mb-4 transition"></i>
+                        <h3 class="text-xl font-bold mb-2">Python</h3>
+                        <p class="text-xs text-gray-400">AI & Scripting</p>
+                    </div>
+
+                    <div onclick="openModal('mongo')" class="bg-surface p-6 rounded-xl border border-white/5 hover:border-brand/50 transition duration-300 group hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition text-brand"><i class="fas fa-expand-alt"></i></div>
+                        <i class="fas fa-database text-4xl text-gray-500 group-hover:text-green-400 mb-4 transition"></i>
+                        <h3 class="text-xl font-bold mb-2">MongoDB</h3>
+                        <p class="text-xs text-gray-400">NoSQL Data</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-hub" class="py-20 bg-gradient-to-b from-dark to-black relative border-t border-white/5">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-ai/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="max-w-6xl mx-auto px-6 relative z-10">
+                <h2 class="text-4xl md:text-5xl font-orbitron font-bold mb-4 text-center text-white">THE <span class="text-ai">AI HUB</span></h2>
+                <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto">Exploring the frontiers of Artificial Intelligence. From historical milestones to future possibilities.</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    
+                    <div class="lg:col-span-4 space-y-4">
+                        <h3 class="text-2xl font-rajdhani font-bold mb-6 text-white flex items-center gap-2">
+                            <i class="fas fa-history text-ai"></i> MILESTONES
+                        </h3>
+                        
+                        <div class="bg-surface p-4 rounded-lg border-l-4 border-ai hover:bg-ai/5 transition">
+                            <div class="text-xs font-bold text-ai mb-1">1950</div>
+                            <h4 class="font-bold text-white">The Turing Test</h4>
+                            <p class="text-xs text-gray-400 mt-1">Alan Turing proposes machine intelligence.</p>
+                        </div>
+
+                        <div class="bg-surface p-4 rounded-lg border-l-4 border-ai hover:bg-ai/5 transition">
+                            <div class="text-xs font-bold text-ai mb-1">1997</div>
+                            <h4 class="font-bold text-white">Deep Blue</h4>
+                            <p class="text-xs text-gray-400 mt-1">AI beats world chess champion.</p>
+                        </div>
+
+                        <div class="bg-surface p-4 rounded-lg border-l-4 border-ai hover:bg-ai/5 transition">
+                            <div class="text-xs font-bold text-ai mb-1">2012</div>
+                            <h4 class="font-bold text-white">Deep Learning</h4>
+                            <p class="text-xs text-gray-400 mt-1">AlexNet revolutionizes image recognition.</p>
+                        </div>
+
+                        <div class="bg-surface p-4 rounded-lg border-l-4 border-ai hover:bg-ai/5 transition">
+                            <div class="text-xs font-bold text-ai mb-1">2023+</div>
+                            <h4 class="font-bold text-white">Generative AI</h4>
+                            <p class="text-xs text-gray-400 mt-1">LLMs (GPT, Gemini) change everything.</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-8">
+                        
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-rajdhani font-bold mb-6 text-white flex items-center gap-2">
+                                <i class="fas fa-tools text-brand"></i> AI TOOLKIT
+                            </h3>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                <div class="bg-surface p-4 rounded border border-white/5 flex items-center gap-3">
+                                    <i class="fab fa-python text-2xl text-blue-400"></i>
+                                    <span class="font-bold text-sm">Python</span>
+                                </div>
+                                <div class="bg-surface p-4 rounded border border-white/5 flex items-center gap-3">
+                                    <i class="fas fa-project-diagram text-2xl text-orange-400"></i>
+                                    <span class="font-bold text-sm">TensorFlow</span>
+                                </div>
+                                <div class="bg-surface p-4 rounded border border-white/5 flex items-center gap-3">
+                                    <i class="fas fa-fire text-2xl text-red-500"></i>
+                                    <span class="font-bold text-sm">PyTorch</span>
+                                </div>
+                                <div class="bg-surface p-4 rounded border border-white/5 flex items-center gap-3">
+                                    <i class="fas fa-brain text-2xl text-pink-400"></i>
+                                    <span class="font-bold text-sm">NLP</span>
+                                </div>
+                                <div class="bg-surface p-4 rounded border border-white/5 flex items-center gap-3">
+                                    <i class="fas fa-eye text-2xl text-cyan-400"></i>
+                                    <span class="font-bold text-sm">Computer Vision</span>
+                                </div>
+                                <div class="bg-surface p-4 rounded border border-white/5 flex items-center gap-3">
+                                    <i class="fas fa-robot text-2xl text-green-400"></i>
+                                    <span class="font-bold text-sm">Robotics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-rajdhani font-bold mb-6 text-white flex items-center gap-2">
+                                <i class="fas fa-rocket text-accent"></i> FUTURE IMPACT
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-surface p-5 rounded-lg border border-white/5 hover:border-accent/30 transition">
+                                    <h4 class="font-bold text-white mb-2">Hyper-Automation</h4>
+                                    <p class="text-xs text-gray-400">AI agents autonomously handling complex workflows across industries.</p>
+                                </div>
+                                <div class="bg-surface p-5 rounded-lg border border-white/5 hover:border-accent/30 transition">
+                                    <h4 class="font-bold text-white mb-2">Personalized Medicine</h4>
+                                    <p class="text-xs text-gray-400">AI-driven drug discovery and tailored treatments for individuals.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-black flex flex-col items-center justify-center overflow-hidden relative">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand/5 rounded-full blur-3xl z-0"></div>
+
+            <div class="z-10 text-center mb-10">
+                <h2 class="text-3xl font-orbitron font-bold">READY TO <span class="text-brand">INNOVATE?</span></h2>
+                <p class="text-gray-400 mt-2">Flip the card below</p>
+            </div>
+
+            <div class="flip-card w-80 h-48 z-10">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fas fa-handshake text-brand text-3xl mb-3"></i>
+                        <h3 class="text-2xl font-bold font-orbitron tracking-wider">LETS COLLAB</h3>
+                        <p class="text-xs text-gray-400 mt-2">CODE X RIJU OFFICIAL</p>
+                        <div class="mt-4 text-xs text-brand animate-pulse">Click to Flip <i class="fas fa-sync ml-1"></i></div>
+                    </div>
+
+                    <div class="flip-card-back">
+                        <h3 class="text-white font-bold mb-4 font-orbitron">SOCIAL LINKS</h3>
+                        <div class="flex gap-4 justify-center items-center">
+                            <a href="https://github.com/rijuyan07" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 border border-white/20">
+                                <i class="fab fa-github text-white text-lg"></i>
+                            </a>
+                            <a href="https://www.facebook.com/share/1D5F55Kz7f/" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-300 transform hover:scale-110 border border-white/20">
+                                <i class="fab fa-facebook-f text-white text-lg"></i>
+                            </a>
+                             <a href="https://www.instagram.com/i_am_riju.x07?igsh=MWtiZXF1eWJuZGExOQ==" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-red-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-110 border border-white/20">
+                                <i class="fab fa-instagram text-white text-lg"></i>
+                            </a>
+                            <a href="mailto:srijuyanur@gmail.com" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition-all duration-300 transform hover:scale-110 border border-white/20">
+                                <i class="fas fa-envelope text-white text-lg"></i>
+                            </a>
+                        </div>
+                        <p class="text-[10px] text-gray-500 mt-4">@codexriju</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-6 bg-black text-center border-t border-white/10">
+            <p class="text-gray-500 text-sm font-rajdhani">&copy; <span id="year"></span> CODE X RIJU. All Rights Reserved.</p>
+        </footer>
+
+    </main>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
